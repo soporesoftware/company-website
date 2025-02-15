@@ -1,0 +1,112 @@
+/* General Layout */
+.container {
+    max-width: 1200px;
+    padding: 0 15px;  /* Ensures content doesn't touch edges */
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+/* Spacing Between Rows */
+.row {
+    row-gap: 30px; 
+}
+
+/* Services Section */
+.service-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  /* Centering content */
+    text-align: center;
+    border-radius: 15px;
+    padding: 30px;
+    background: white;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-height: 300px;  /* Ensures uniform size */
+    flex-grow: 1;  /* Makes all cards equal height */
+    width: 100%; /* Ensures responsive width */
+}
+
+/* Service Card Hover Effect */
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Service Card Icon */
+.icon {
+    font-size: 50px;
+    color: #2a5298;
+    margin-bottom: 15px;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 60px 15px;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    text-align: center;
+    color: white;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    background: #333;
+    color: white;
+    text-align: center;
+}
+
+/* Headings */
+h5 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) { /* Tablets */
+    .service-card {
+        padding: 25px;
+        min-height: 270px;
+    }
+}
+
+@media (max-width: 768px) { /* Mobile */
+    .service-card {
+        padding: 20px;
+        min-height: auto; /* Auto height for better stacking */
+    }
+    .icon {
+        font-size: 40px;
+    }
+}
+
+/* Cards */
+.card {
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Flexbox Fix for Equal Heights */
+.d-flex .service-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
