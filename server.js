@@ -6,7 +6,7 @@ const PORT = 3000;
 
 
 const companyData = {
-    companyName: "Sopore",
+    companyName: "Sopor",
     tagline: "Innovative IT Solutions for a Digital World"
 };
 // Set EJS as the view engine
